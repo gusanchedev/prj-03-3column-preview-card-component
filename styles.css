@@ -70,3 +70,16 @@ button {
 .luxury-box button {
   color: var(--Very-dark-cyan);
 }
+
+@media (min-width: 768px) {
+  .container {
+    width: 70%;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+
+  }
+  button {
+    margin: 60px 0 40px 0;
+  }
+}
