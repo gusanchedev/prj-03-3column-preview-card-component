@@ -61,16 +61,31 @@ button {
   font-weight: 700;
   background-color: var(--Verylight-gray-background-headings-buttons);
 }
+button:hover {
+  border: 2px solid var(--Verylight-gray-background-headings-buttons);
+  cursor: pointer;
+}
 .sedan-box button {
   color: var(--Bright-orange);
+}
+.sedan-box button:hover {
+  background-color: var(--Bright-orange);
+  color: var(--Verylight-gray-background-headings-buttons);
 }
 .suv-box button {
   color: var(--Dark-cyan);
 }
+.suv-box button:hover {
+  background-color: var(--Dark-cyan);
+  color: var(--Verylight-gray-background-headings-buttons);
+}
 .luxury-box button {
   color: var(--Very-dark-cyan);
 }
-
+.luxury-box button:hover {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Verylight-gray-background-headings-buttons);
+}
 @media (min-width: 768px) {
   .container {
     width: 70%;
