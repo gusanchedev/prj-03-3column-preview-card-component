@@ -42,62 +42,78 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS variables
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned to structurate CSS from general to particular styles beginning from variables and global selectors like root, html and *.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Verylight-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Verylight-gray-background-headings-buttons);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+Use of pseudo-classes: The :first-of-type CSS pseudo-class represents the first element of its type among a group of sibling elements.
+```css
+p:first-of-type {
+  text-transform: uppercase;
+  color: var(--Verylight-gray-background-headings-buttons);
+  font-size: 30px;
+  font-family: "Big Shoulders Display", cursive;
+  margin: 30px 0 30px 0;
+}
+p:last-of-type {
+  color: var(--Transparent-white-paragraphs);
+  line-height: 25px;
+  padding-right: 20px;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+```css
+.sedan-box button:hover {
+  background-color: var(--Bright-orange);
+  color: var(--Verylight-gray-background-headings-buttons);
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In future challenges I plan to use Tailwindcss for styling and Vite as frontend development environmnt.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [First of type pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type) in order to reduce the amount of repeated code.
+- [Hover pseudo-class](https://developer.mozilla.org/es/docs/Web/CSS/:hover) - Hover pseudo-class for active states.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Gustavo Sanchez](https://www.gusanche.dev)
+- Frontend Mentor - [@gusanchedev](https://www.frontendmentor.io/profile/gusanchedev)
+- Github - [@gusanchedev](https://www.github.com/gusanchedev)
+- Twitter - [@gusanchedev](https://www.twitter.com/gusanchedev)
+- Linkedin - [gusanchedev](https://www.linkedin.com/in/gusanchedev/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks to Mariapaz for being my friend and support 💙
